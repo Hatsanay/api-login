@@ -92,7 +92,7 @@ app.post('/login', async (req, res) => {
         var token = jwt.sign({ username: username });
         res.send({ ok: true, token: token });
       } else {
-        res.send({ ok: false, error: 'Invalid username or password!', code: HttpStatus.UNAUTHORIZED });
+        res.send({ ok: false, error: 'ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง!', code: HttpStatus.UNAUTHORIZED });
       }
     } catch (error) {
       console.log(error);
